@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2F39C0">
+<title>Products | Saravana Fashion — Tiruppur</title>
+<meta name="description" content="Browse Saravana Fashion's readymade garments — Men's Rocky tees, Women's Fit To Fashion track pants, Njoy Kids boys' wear, and girls' wear. Enquire on WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%23FBF3E7'/%3E%3Ctext x='60' y='76' font-family='Arial,sans-serif' font-weight='800' font-size='50' fill='%232F39C0' text-anchor='middle' letter-spacing='-2'%3ESF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#men,#women,#kids{scroll-margin-top:110px}
+body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+:root{
+  --navy:#4F5FEE;--navy-deep:#2F39C0;--navy-light:#EAECFE;
+  --gold:#C9A24B;--gold-light:#F4E9D0;
+  --cream:#FBF7F1;--ink:#201E2E;--muted:#817C94;
+}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.brand-mark{width:44px;height:44px;color:var(--navy);flex-shrink:0;display:block}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:950;background:linear-gradient(180deg,rgba(255,255,255,.7) 0%,rgba(255,255,255,.28) 70%,transparent 100%);padding:16px 5vw;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;background:#fff;padding:9px 16px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.brand-mark-full{height:38px;width:auto;display:block}
+.brand-mark{width:44px;height:44px;color:var(--navy);flex-shrink:0;display:block}
+.brand-name{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--navy-deep);letter-spacing:-.01em}
+.nav-wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-left:auto}
+.navbar{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.navbar a{color:var(--ink);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 0;transition:color .2s;display:flex;align-items:center;gap:4px}
+.navbar a:hover{color:var(--navy)}
+.navbar a.active{color:var(--navy)}
+.topbar-icons{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.topbar-icons a{width:34px;height:34px;border-radius:50%;background:var(--navy-light);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.92rem;transition:background .2s}
+.topbar-icons a:hover{background:var(--gold-light)}
+.nav-item{position:relative;display:flex;align-items:center}
+.nav-drop{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border-radius:6px;box-shadow:0 16px 40px rgba(0,0,0,.22);display:none;flex-direction:column;min-width:170px;z-index:950;overflow:hidden}
+.nav-item:hover .nav-drop,.nav-item.open .nav-drop{display:flex}
+.nav-drop a{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--ink);text-decoration:none;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:14px 20px;border-bottom:1px solid #F0E6E9}
+.nav-drop a:last-child{border-bottom:none}
+.nav-drop a:hover{background:var(--navy-light);color:var(--navy-deep)}
+.nav-drop a:after{content:'\203a';font-size:1.05rem;font-weight:400}
+@media(max-width:700px){.nav-drop{position:static;transform:none;box-shadow:none;min-width:0;background:transparent}.nav-drop a{border-bottom-color:#F0E6E9}}
+.page-head{background:linear-gradient(155deg,var(--navy-deep),var(--navy));color:#fff;padding:52px 5vw;text-align:center}
+.page-head h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:8px}
+.page-head p{color:rgba(255,255,255,.75);font-size:.92rem}
+.jump-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:20px 5vw;background:#fff;border-bottom:1px solid #F0E6E9}
+.jump-row a{background:var(--navy-light);color:var(--navy-deep);padding:8px 18px;border-radius:30px;text-decoration:none;font-size:.82rem;font-weight:600;transition:background .2s}
+.jump-row a:hover{background:var(--gold-light)}
+section{padding:56px 5vw}
+.container{max-width:1100px;margin:0 auto}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:30px;border-bottom:2px solid var(--gold-light);padding-bottom:14px}
+.cat-head h2{font-size:clamp(1.3rem,2.6vw,1.7rem);color:var(--navy-deep)}
+.cat-head span{color:var(--muted);font-size:.84rem}
+.pd-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:480px){.pd-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:760px){.pd-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.pd-grid{grid-template-columns:repeat(4,1fr)}}
+.pd-card{background:#fff;border:1px solid #F0E6E9;border-radius:12px;overflow:hidden;transition:transform .22s,box-shadow .22s;display:flex;flex-direction:column}
+.pd-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(46,49,146,.12)}
+.pd-img{aspect-ratio:4/5;background:linear-gradient(150deg,var(--navy-light),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy);overflow:hidden}
+.pd-img svg{width:34%;height:34%}
+.pd-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
+.pd-card:hover .pd-img img{transform:scale(1.08)}
+.pd-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:5px}
+.pd-tag{font-size:.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.06em}
+.pd-name{font-weight:700;font-size:.92rem;color:var(--ink)}
+.soon-box{background:#fff;border:1.5px dashed #E4D9DD;border-radius:14px;padding:44px 24px;text-align:center}
+.soon-box p{color:var(--muted);font-size:.9rem;max-width:420px;margin:10px auto 0}
+.soon-box .ico{font-size:1.8rem;margin-bottom:6px}
+.btn-primary{background:var(--gold);color:var(--navy-deep);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.88rem;display:inline-block;margin-top:16px}
+.cta-strip{background:linear-gradient(135deg,var(--navy-deep),var(--navy));color:#fff;text-align:center;padding:60px 5vw}
+.cta-strip h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:12px}
+.cta-strip p{color:rgba(255,255,255,.78);max-width:480px;margin:0 auto 28px;font-size:.92rem}
+footer{background:#1C2270;color:#C9CCF5;padding:0}
+.footer-grid{padding:48px 5vw 20px;display:grid;grid-template-columns:1fr;gap:32px;max-width:1100px;margin:0 auto}
+@media(min-width:760px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.2fr}}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.footer-brand span{font-family:'Playfair Display',serif;font-weight:700;color:#fff;font-size:1.1rem}
+.footer-col h5{color:#fff;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.footer-col a{display:block;color:#B8B4CC;text-decoration:none;font-size:.86rem;margin-bottom:9px;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-col p{font-size:.86rem;line-height:1.7;color:#B8B4CC}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 5vw;text-align:center;font-size:.78rem;color:#8B87A3}
+.wa-fab{position:fixed;bottom:24px;right:24px;z-index:900;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s}
+.wa-fab:hover{transform:scale(1.1)}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;padding:4px 2px;transition:color .3s;flex-shrink:0}
+.topbar.scrolled .hamburger{color:var(--ink)}
+.drawer-backdrop{position:fixed;inset:0;background:rgba(10,12,38,.55);z-index:1199;opacity:0;pointer-events:none;transition:opacity .3s}
+.drawer-backdrop.open{opacity:1;pointer-events:auto}
+.mobile-drawer{position:fixed;top:0;right:0;bottom:0;width:min(78vw,320px);background:#fff;z-index:1200;transform:translateX(100%);transition:transform .32s ease;box-shadow:-10px 0 34px rgba(0,0,0,.25);display:flex;flex-direction:column;padding:26px 26px 30px;overflow-y:auto}
+.mobile-drawer.open{transform:translateX(0)}
+.drawer-close{align-self:flex-end;background:none;border:none;font-size:1.7rem;color:var(--ink);cursor:pointer;margin-bottom:10px;line-height:1}
+.mobile-drawer a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.86rem;letter-spacing:.03em;text-transform:uppercase;padding:14px 2px;border-bottom:1px solid #F0E6E9}
+.mobile-drawer a.sub{font-size:.8rem;font-weight:600;color:var(--muted);padding-left:14px;text-transform:none;letter-spacing:0}
+.mobile-drawer a.active{color:var(--navy)}
+.drawer-icons{display:flex;gap:12px;margin-top:20px}
+.drawer-icons a{width:38px;height:38px;border-radius:50%;background:var(--navy-light);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;border-bottom:none;padding:0}
+@media(max-width:860px){.nav-wrap{display:none}.hamburger{display:flex;align-items:center;justify-content:center}}
+/* ANIMATION */
+[data-reveal]{opacity:0;transform:translateX(-60px);transition:opacity 1.3s cubic-bezier(.16,.6,.2,1),transform 1.3s cubic-bezier(.16,.6,.2,1)}
+[data-reveal="right"]{transform:translateX(60px)}
+[data-reveal="up"]{transform:translateY(40px)}
+[data-reveal].in-view{opacity:1;transform:none}
+.pd-card[data-reveal]{transition:opacity 1s cubic-bezier(.16,.6,.2,1),transform 1s cubic-bezier(.16,.6,.2,1)}
+.pd-grid .pd-card:nth-child(1){transition-delay:.05s}
+.pd-grid .pd-card:nth-child(2){transition-delay:.12s}
+.pd-grid .pd-card:nth-child(3){transition-delay:.19s}
+.pd-grid .pd-card:nth-child(4){transition-delay:.26s}
+.pd-grid .pd-card:nth-child(5){transition-delay:.33s}
+.pd-grid .pd-card:nth-child(n+6){transition-delay:.4s}
+.btn-primary{transition:transform .2s ease,background .2s ease}
+.btn-primary:hover{transform:translateY(-3px)}
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="ic-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3 4 7l2 2 2-1v12h8V8l2 1 2-2-4-4-2 2h-4z"/>
+</symbol>
+<symbol id="ic-women" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3c-3 0-4 2-4 4s1 3 4 3 4-1 4-3-1-4-4-4z"/><path d="M8 10l-3 10h5l1-4 1 4h5L14 10"/>
+</symbol>
+<symbol id="ic-girl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="5" r="3"/><path d="M8 21l2-8-3-3h10l-3 3 2 8z"/>
+</symbol>
+<symbol id="logo-sf" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="7"/>
+  <text x="50" y="66" font-family="Arial,sans-serif" font-weight="800" font-size="44" fill="currentColor" text-anchor="middle">SF</text>
+</symbol>
+<symbol id="logo-kanizo" viewBox="0 0 100 120">
+  <path d="M16,34 L16,18 L28,28 L38,12 L50,24 L62,12 L72,28 L84,18 L84,34 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M18,34 H82 V66 Q82,94 50,113 Q18,94 18,66 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <text x="50" y="84" font-family="Arial,sans-serif" font-weight="800" font-size="42" fill="currentColor" text-anchor="middle">K</text>
+</symbol>
+<symbol id="logo-kanizo-full" viewBox="0 0 440 120">
+  <path d="M16,34 L16,18 L28,28 L38,12 L50,24 L62,12 L72,28 L84,18 L84,34 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M18,34 H82 V66 Q82,94 50,113 Q18,94 18,66 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <text x="50" y="84" font-family="Arial,sans-serif" font-weight="800" font-size="42" fill="currentColor" text-anchor="middle">K</text>
+  <text x="112" y="80" font-family="Arial,sans-serif" font-weight="800" font-size="54" fill="currentColor" letter-spacing="1">KANIZO</text>
+  <text x="424" y="38" font-family="Arial,sans-serif" font-weight="600" font-size="20" fill="currentColor">&#174;</text>
+</symbol>
+</defs>
+</svg>
+
+<div class="topbar">
+  <a class="brand" href="index.html">
+    <img class="brand-mark-full" src="./img/kanizo-logo.png" alt="Kanizo">
+  </a>
+  <button class="hamburger" onclick="toggleDrawer(true)" aria-label="Open menu">☰</button>
+
+  <div class="nav-wrap">
+
+    <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav-item" id="navProducts">
+      <a href="products.html" class="active" onclick="return toggleNavDrop(event,this)">Products ▾</a>
+      <div class="nav-drop">
+        <a href="products.html#women">Women</a>
+        <a href="products.html#men">Men</a>
+          <a href="products.html#kids">Kids</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+    <div class="topbar-icons">
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+    <a href="https://www.google.com/maps/place/?q=place_id:ChIJPx9vjrEHqTsRLGr2lDEzn5E" target="_blank" rel="noopener" aria-label="Google">G</a>
+  </div>
+
+  </div>
+</div>
+<script>
+function toggleNavDrop(e,el){
+  if(window.matchMedia('(hover: none)').matches){
+    var item=el.closest('.nav-item');
+    if(!item.classList.contains('open')){e.preventDefault();item.classList.add('open');}
+  }
+}
+function toggleDrawer(open){
+  var d=document.getElementById('mobileDrawer'), b=document.getElementById('drawerBackdrop');
+  if(!d||!b)return;
+  d.classList.toggle('open',open);
+  b.classList.toggle('open',open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+(function(){
+  var tb=document.querySelector('.topbar');
+  if(!tb)return;
+  function onScroll(){ tb.classList.toggle('scrolled', window.scrollY>40); }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+window.addEventListener('DOMContentLoaded',function(){
+  var els=document.querySelectorAll('[data-reveal]');
+  if(!els.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');obs.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){obs.observe(el);});
+});
+</script>
+
+<div class="page-head">
+  <h1>Our Products</h1>
+  <p>Readymade garments manufactured in Tiruppur, Tamil Nadu</p>
+</div>
+
+<div class="jump-row">
+  <a href="#men">Men's Wear</a>
+  <a href="#women">Women's Wear</a>
+  <a href="#kids">Kids Wear</a>
+</div>
+
+<section id="men">
+  <div class="container">
+    <div class="cat-head" data-reveal="up"><h2>Men's Wear — Rocky Collection</h2><span>10 designs · Half-sleeve round neck · 100% cotton</span></div>
+    <div class="pd-grid">
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%231%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-1.jpg" alt="Rocky Tee Design 1" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #1</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%232%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-2.jpg" alt="Rocky Tee Design 2" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #2</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%233%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-3.jpg" alt="Rocky Tee Design 3" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #3</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%234%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-4.jpg" alt="Rocky Tee Design 4" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #4</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%235%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-5.jpg" alt="Rocky Tee Design 5" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #5</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%236%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-6.jpg" alt="Rocky Tee Design 6" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #6</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%237%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-7.jpg" alt="Rocky Tee Design 7" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #7</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%238%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-8.jpg" alt="Rocky Tee Design 8" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #8</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%239%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-9.jpg" alt="Rocky Tee Design 9" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #9</span><span class="pd-tag">Men</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Rocky%20Tee%20Design%20%2310%20(Men)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/men-10.jpg" alt="Rocky Tee Design 10" loading="lazy"></div><div class="pd-body"><span class="pd-name">Rocky — Design #10</span><span class="pd-tag">Men</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="women" style="background:#fff">
+  <div class="container">
+    <div class="cat-head" data-reveal="up"><h2>Women's Wear — Fit To Fashion</h2><span>Printed track pants, joggers, shorts &amp; capris</span></div>
+    <div class="pd-grid">
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%231%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-1.jpg" alt="Fit To Fashion Design 1" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #1</span><span class="pd-tag">Women</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%232%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-2.jpg" alt="Fit To Fashion Design 2" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #2</span><span class="pd-tag">Women</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%233%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-3.jpg" alt="Fit To Fashion Design 3" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #3</span><span class="pd-tag">Women</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%234%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-4.jpg" alt="Fit To Fashion Design 4" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #4</span><span class="pd-tag">Women</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%235%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-5.jpg" alt="Fit To Fashion Design 5" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #5</span><span class="pd-tag">Women</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Fit%20To%20Fashion%20Track%20Pants%20Design%20%236%20(Women)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/women-6.jpg" alt="Fit To Fashion Design 6" loading="lazy"></div><div class="pd-body"><span class="pd-name">Fit To Fashion — Design #6</span><span class="pd-tag">Women</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="kids">
+  <div class="container">
+    <div class="cat-head" data-reveal="up"><h2>Kids Wear — Njoy Kids</h2><span>22 designs · Up2Date · A1 Quality</span></div>
+    <div class="pd-grid">
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%231%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-1.jpg" alt="Njoy Kids Design 1" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #1</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%232%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-2.jpg" alt="Njoy Kids Design 2" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #2</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%233%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-3.jpg" alt="Njoy Kids Design 3" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #3</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%234%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-4.jpg" alt="Njoy Kids Design 4" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #4</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%235%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-5.jpg" alt="Njoy Kids Design 5" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #5</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%236%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-6.jpg" alt="Njoy Kids Design 6" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #6</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%237%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-7.jpg" alt="Njoy Kids Design 7" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #7</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%238%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-8.jpg" alt="Njoy Kids Design 8" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #8</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%239%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-9.jpg" alt="Njoy Kids Design 9" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #9</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2310%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-10.jpg" alt="Njoy Kids Design 10" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #10</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2311%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-11.jpg" alt="Njoy Kids Design 11" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #11</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2312%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-12.jpg" alt="Njoy Kids Design 12" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #12</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2313%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-13.jpg" alt="Njoy Kids Design 13" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #13</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2314%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-14.jpg" alt="Njoy Kids Design 14" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #14</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2315%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-15.jpg" alt="Njoy Kids Design 15" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #15</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2316%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-16.jpg" alt="Njoy Kids Design 16" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #16</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2317%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-17.jpg" alt="Njoy Kids Design 17" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #17</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2318%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-18.jpg" alt="Njoy Kids Design 18" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #18</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2319%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-19.jpg" alt="Njoy Kids Design 19" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #19</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2320%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-20.jpg" alt="Njoy Kids Design 20" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #20</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2321%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-21.jpg" alt="Njoy Kids Design 21" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #21</span><span class="pd-tag">Kids</span></div></a>
+      <a class="pd-card" data-reveal="right" href="https://wa.me/919087882233?text=Hi%2C%20I'm%20interested%20in%20Njoy%20Kids%20Design%20%2322%20(Kids)%20from%20Saravana%20Fashion.%20Could%20you%20share%20more%20details%20and%20pricing%3F"><div class="pd-img"><img src="./img/kids-22.jpg" alt="Njoy Kids Design 22" loading="lazy"></div><div class="pd-body"><span class="pd-name">Njoy Kids — Design #22</span><span class="pd-tag">Kids</span></div></a>
+    </div>
+    <div class="soon-box" data-reveal="up" style="margin-top:40px">
+      <img src="./img/kanizo-logo.png" alt="Kanizo" style="width:220px;height:auto;margin:0 auto 14px;display:block">
+      <strong>Kanizo girls' collection — photos coming soon</strong>
+      <p>Our Kanizo line within Kids Wear will be added here shortly. Message us on WhatsApp in the meantime for the full catalog.</p>
+      <a class="btn-primary" href="https://wa.me/919087882233?text=Hi%2C%20I'd%20like%20to%20see%20your%20Kanizo%20collection%20from%20Saravana%20Fashion.">💬 Ask for Kanizo Catalog</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h2>Didn't Find What You're Looking For?</h2>
+    <p>Message us on WhatsApp — we'll help you find the right style from our full catalog.</p>
+    <a href="https://wa.me/919087882233?text=Hi%2C%20I'd%20like%20to%20see%20Saravana%20Fashion's%20full%20product%20catalog." class="btn-primary">💬 WhatsApp Us Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><svg class="brand-mark" viewBox="0 0 100 100" style="color:var(--gold)"><use href="#logo-sf"/></svg><span>Saravana Fashion</span></div>
+      <p>Readymade garments manufacturer in Tiruppur, Tamil Nadu — Men's, Women's and Kids' wear.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Our Products</h5>
+      <a href="products.html#men">Men's Wear</a>
+      <a href="products.html#women">Women's Wear</a>
+      <a href="products.html#kids">Kids Wear</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <p>Dharapuram Road, Thillai Nagar, Tiruppur, Tamil Nadu 641604, India</p>
+      <p style="margin-top:10px"><a href="tel:+919087882233">090878 82233</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Saravana Fashion · Tiruppur, Tamil Nadu</div>
+</footer>
+
+<a href="https://wa.me/919087882233?text=Hi%2C%20I%20found%20Saravana%20Fashion%20online%20and%20I'd%20like%20to%20enquire%20about%20your%20garments.%20Could%20you%20please%20share%20more%20details%3F" class="wa-fab" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" onclick="toggleDrawer(false)" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html" class="active">Products</a>
+  <a href="products.html#men" class="sub">— Men's Wear</a>
+  <a href="products.html#women" class="sub">— Women's Wear</a>
+  <a href="products.html#kids" class="sub">— Kids Wear</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+  <div class="drawer-icons">
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+    <a href="https://www.google.com/maps/place/?q=place_id:ChIJPx9vjrEHqTsRLGr2lDEzn5E" target="_blank" rel="noopener" aria-label="Google">G</a>
+  </div>
+</div>
+</body></html>
