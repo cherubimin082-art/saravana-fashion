@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%;position:relative}
 :root{
   --navy:#4F5FEE;--navy-deep:#2F39C0;--navy-light:#EAECFE;
   --gold:#C9A24B;--gold-light:#F4E9D0;
@@ -89,6 +89,7 @@ footer{background:#1C2270;color:#C9CCF5;padding:0}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 5vw;text-align:center;font-size:.78rem;color:#8B87A3}
 .wa-fab{position:fixed;bottom:24px;right:24px;z-index:900;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s}
 .wa-fab:hover{transform:scale(1.1)}
+@media(max-width:480px){.wa-fab{width:48px;height:48px;bottom:16px;right:16px;font-size:.9em}}
 .hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;padding:4px 2px;transition:color .3s;flex-shrink:0}
 .topbar.scrolled .hamburger{color:var(--ink)}
 .drawer-backdrop{position:fixed;inset:0;background:rgba(10,12,38,.55);z-index:1199;opacity:0;pointer-events:none;transition:opacity .3s}
